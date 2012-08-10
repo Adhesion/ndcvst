@@ -119,10 +119,8 @@ MultiGUIEditor::~MultiGUIEditor()
 	int i;
 	char tempstr[32];
 	vector<AEffEditor *>::iterator it;
-	vector<void *>::iterator it_syswin;
 
-	i =0;
-	it_syswin = systemWindows.begin();
+	i = 0;
 
 	for(it=editors.begin();it!=editors.end();it++)
 	{
@@ -136,7 +134,6 @@ MultiGUIEditor::~MultiGUIEditor()
 #endif
 
 		i++;
-		it_syswin++;
 	}
 	editors.clear(); //Removes the entries from _editors (is this necessary?).
 
